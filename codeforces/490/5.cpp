@@ -13,7 +13,6 @@ bool visited[N+1];
 bool visited2[N+1];
 vi G[N+1];
 vector<pair<int, int>> toAppend;
-vi G2[N+1];
 
 void DFS(int s) {
     visited[s] = true;
@@ -30,8 +29,7 @@ int dfsComputeUtil(int s) {
   for(auto& x : G[s]) {
       if(!visited2[x]) {
           if(!visited[x]) {
-            G2[s].pb(x);
-            toAppend[s]++;
+              wynik++;
           }
           int res = dfsComputeUtil(x);
           wynik += res;
@@ -43,7 +41,6 @@ int dfsComputeUtil(int s) {
 int computeFalseDFS(int s, int n) {
     for(int i=0; i<=n; i++)
       visited2[i] = false;
-
     return dfsComputeUtil(s);
 }
 
@@ -52,8 +49,10 @@ int main() {
   std::ios::sync_with_stdio(false);
   int n, m, t, s, a, b;
   cin >> n >> m >> s;
-  toAppend.resize(n+1);
-  fill(toAppend.begin(), toAppend.end(), 0);
+  toAppend.resize(N+1);
+  for(int i=0; i<=N; i++) {
+    toAppend[i] = mp(-1, i);
+  }
   for(int i=1; i<=n; i++) visited[i] = false;
   for(int i=0; i<m; i++) {
     cin >> a >> b;
@@ -63,22 +62,21 @@ int main() {
 
   for(int i=1; i<=n; i++) {
       if(!visited[i]) {
-          toAppend[i-1] = computeFalseDFS(i, n);
+          toAppend[i].first = computeFalseDFS(i, n);
       }
   }
-  std::sort(toAppend.begin(), toAppend.end(), std::greater<int>());
+  std::sort(toAppend.begin(), toAppend.end(), std::greater<pair<int, int>>());
+
   int res = 0;
   for(int i=0; i<n; i++) {
-      if(!visited[i+1]) {
+      int idx = toAppend[i].second;
+      if(toAppend[i].first==-1)
+          break;
+      else if(!visited[idx]) {
           res++;
-          for(auto& neigh : G2[i+1]) {
-              if(!visited[neigh]) {
-                  visited[neigh] = true;
-              }
-          }
+          DFS(idx);
       }
   }
   cout << res << endl;
-  // policz dfsem
   return 0;
 }
