@@ -16,11 +16,20 @@ using namespace std;
 typedef long long LL;
 typedef double ld;
 const LL p = 1000000007;
+#define N 51000
 
 
 int main() {
   std::ios::sync_with_stdio(false);
-  int n, m, t;
-
+  LL n, m, t;
+  cin >> n;
+  //LL wynik = ((n/2) + 1)*ceil(n/2);
+  vll Mi(n);
+  LL maxi = -1;
+  for(int i=0; i<n; i++) {
+    Mi[i] = (i+1)*(n-i);
+    maxi = max(Mi[i], maxi);
+  }
+  cout << maxi << endl;
   return 0;
 }

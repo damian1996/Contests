@@ -17,10 +17,34 @@ typedef long long LL;
 typedef double ld;
 const LL p = 1000000007;
 
-
 int main() {
   std::ios::sync_with_stdio(false);
   int n, m, t;
-
+  cin >> n;
+  vector<char> vec;
+  vec.resize(n);
+  for(int i=0; i<n; i++) {
+      cin >> vec[i];
+  }
+  LL wynik = 1;
+  char prev;
+  LL countF = 0;
+  LL countFAll = 0;
+  for(int i=0; i<n; i++) {
+    if(vec[i]=='s') {
+      if(prev=='s') {
+          wynik = (wynik * countFAll)%p;
+      }
+      prev = 's';
+    }
+    else if(vec[i]=='f') {
+      if(prev=='s') {
+        wynik = (wynik * countFAll)%p;
+      }
+      countFAll++;
+      prev = 'f';
+    }
+  }
+  cout << wynik << endl;
   return 0;
 }

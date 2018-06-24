@@ -20,7 +20,24 @@ const LL p = 1000000007;
 
 int main() {
   std::ios::sync_with_stdio(false);
-  int n, m, t;
+  int n, m, t, ptr = 0;
+  string s, sur;
+  cin >> s;
+  cin >> sur;
+  string ss;
+  ptr++;
+  ss = s[0];
+  while(true) {
+      if(ptr>=s.size() || s[ptr] >= sur[0] ) {
+        ss = ss + sur[0];
+        break;
+      }
+      if(s[ptr] < sur[0]) {
+        ss = ss + s[ptr];
+        ptr++;
+      }
+  }
 
+  cout << ss << endl;
   return 0;
 }
