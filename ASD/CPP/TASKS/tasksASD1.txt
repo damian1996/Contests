@@ -1,0 +1,323 @@
+Zadania na 24 stycznia 2017:
+
+Próg maksymalnej oceny dla tego zestawu: 2 zadania.
+
+1. Dany jest spójny graf nieskierowany G=(V,E). Wypisz, dla każdego wierzchołka v, liczbę spójnych składowych w grafie G∖{v}.
+
+Złożoność: O(V+E).
+
+2. Dany jest graf G=(V,E) skierowany, ważony. Szerokością ścieżki w G nazywamy najmniejszą spośród wag krawędzi na ścieżce. Dla danych na wejściu dwóch wierzchołków s,t, znajdź ścieżkę s→t o największej szerokości i wypisz jej wszystkie wierzchołki. Jeśli istnieje więcej niż jedna najszersza ścieżka, wypisz dowolną z nich. Jeśli nie istnieje żadna, algorytm nie powinien nic wypisywać.
+
+Złożoność: O(ElogV).
+
+3. Dany jest graf G=(V,E) nieskierowany, o wagach całkowitych dodatnich. Wiadomo, że dla każdego w istnieją w grafie co najwyżej dwie krawędzi mające wagę w. Oblicz liczbę różnych minimalnych drzew rozpinających w G.
+
+Złożoność: O(ElogV).
+
+4. Dana jest permutacja (p1,…,pn) zbioru {1,2,…,n}. Znajdź liczbę takich trójek (i,j,k), dla których i<j<k oraz pi<pj<pk.
+
+Złożoność: O(nlogn).
+
+5. Na drzewie wisi n małpek. Małpka numer 1 trzyma się gałęzi ogonkiem. Pozostałe małpki, albo są trzymane przez inne małpki, albo trzymają się innych małpek, albo jedno i drugie równocześnie. Każda małpka ma dwie przednie łapki, każdą może trzymać co najwyżej jedną inną małpkę (za ogon). Rozpoczynając od chwili 0, co sekundę jedna z małpek puszcza jedną łapkę. W ten sposób niektóre małpki spadają na ziemię (gdzie dalej mogą puszczać łapki). Czas spadania małpek jest pomijalnie mały. Wiedząc, w jaki sposób małpki się trzymają oraz w jakiej kolejności puszczają łapki, oblicz dla każdej małpki, kiedy spadnie ona na ziemię,
+
+Złożoność: O(nlog∗n).
+
+6. Dany jest graf, który jest siatką – wierzchołki grafu to punkty kratowe (i,j) dla całkowitych 1≤i,j≤n, a od wierzchołka (i,j) prowadzą krawędzie do (i−1,j), (i+1,j), (i,j−1), (i,j+1) (o ile te istnieją). Zaprojektować strukturę danych obsługującą następujące zapytania:
+remove(e) – usuń krawędź e z grafu (można założyć, że krawędź aktualnie jest w grafie);
+cc () – podaj, ile jest spójnych składowych.
+Na zapytania trzeba odpowiadać online, czyli nie znając następnych zapytań. Złożoność zapytania: O(log∗n).
+
+Zadania na 17 stycznia 2017:
+
+Próg maksymalnej oceny dla tego zestawu: 3 zadania.
+
+1. Dany jest graf G=(V,E) nieskierowany, z nieujemnymi wagami na krawędziach, mający przynajmniej 4 wierzchołki. Wybrać z grafu G zbiór krawędzi o minimalnej wadze taki, aby istniały ścieżki między każdą parą spośród wierzchołków {1,2,3,4}.
+
+Złożoność: O(ElogV).
+
+2. Dany jest zbiór walut, zbiór kantorów (potencjalnie w różnych krajach) oraz zbiór kursów kupna-sprzedaży, które są oferowane przez te kantory dla poszczególnych par walut. Stwierdzić, czy da się osiągnąć dowolnie wielki zysk w złotówkach, inwestujac 1 zł, sprzedając i kupując waluty w kantorach.
+
+Złożoność: O(n3+m), gdzie n to liczba walut, a m to liczba kursów par walut oferowanych przez kantory.
+
+3. Dany jest graf G=(V,E) nieskierowany z nieujemnymi wagami na krawędziach. Każdy wierzchołek i ma przypisany kolor ci∈{1,2,…,10} lub jest bezbarwny. Jeśli wierzchołek ma kolor k, możemy do niego wejść tylko wtedy, jeśli kiedykolwiek wcześniej odwiedziliśmy wierzchołek numer k.
+
+Dla danych s,t znaleźć najkrótszą ścieżkę z wierzchołka s do wierzchołka t zgodną z podanymi regułami. Wierzchołki s i t są bezbarwne.
+
+Złożoność: O(ElogV).
+
+4. Dany jest układ nierówności mający n niewiadomych x1,x2,…,xn i m nierówności postaci:
+
+xi−xj≤wij
+
+dla pewnych liczb rzeczywistych wij. Rozstrzygnąć, czy układ ten ma jakieś rozwiązanie i wypisać jedno, jeśli istnieje.
+
+Złożoność: O(mn).
+
+Zadania na 10 stycznia 2017:
+
+Próg maksymalnej oceny dla tego zestawu: 3 zadania.
+
+1. Dana jest macierz (Dij),i,j=1,2,…,n. Rozstrzygnąć, czy istnieje graf nieskierowany ważony o n wierzchołkach taki, że Dij jest odległością między i-tym, a j-tym wierzchołkiem, dla wszystkich możliwych i,j.
+
+Złożoność: O(n3).
+
+2. Dany jest graf nieskierowany G=(V,E) z nieujemnymi wagami na krawędziach oraz wyróżniony wierzchołek źródłowy s. Dla każdego wierzchołka obliczyć wagę najkrótszej ścieżki (niekoniecznie prostej) o parzystej liczbie krawędzi prowadzącej do niego ze źródła lub wypisać, że ścieżka taka nie istnieje.
+
+Złożoność: O(|E|log|V|).
+
+3. Dany jest graf G=(V,E) nieskierowany, ważony (o dodatnich wagach), mający przynajmniej 4 wierzchołki. Wybrać z grafu G zbiór krawędzi o minimalnej wadze taki, aby istniały ścieżki między każdą parą spośród wierzchołków {1,2,3,4}.
+
+Złożoność: O(V3).
+
+4. Dany jest ważony (o dodatnich wagach) graf skierowany, o n wierzchołkach i m krawędziach, z wyróżnionym źródłem i ujściem. Znajdź najkrótszą ścieżkę, prowadzącą od źródła do ujścia, o tej własności, że każda kolejna krawędź ma wagę większą lub równą wadze poprzedniej krawędzi, lub stwierdź, że taka ścieżka nie istnieje.
+
+Złożoność: O(mlogn).
+
+Zadania na 3 stycznia 2017:
+
+Próg maksymalnej oceny dla tego zestawu: 1 zadanie.
+
+1. Dany jest graf nieskierowany. W niektórych wierzchołkach znajdują się serwery, a w niektórych, niekoniecznie innych, znajdują się klienty. Początkowo z każdego klienta istnieje ścieżka do jakiegoś serwera. Dla każdej krawędzi rozstrzygnij, czy jej usunięcie spowoduje, że któryś klient nie będzie połączony ścieżką z żadnym serwerem. Wymagany czas: liniowy.
+
+2. W grze w pościg bierze udział dwóch graczy: policjant i złodziej. Planszą jest graf nieskierowany, który nie zawiera trójkątów (cykli długości 3). Każdy z graczy posiada po jednym pionku, które początkowo znajdują się w ustalonych wierzchołkach startowych. Gracze wykonują na zmianę ruchy, które polegają na przesunięciu pionka wzdłuż krawędzi lub pozostaniu na miejscu, przy czym pierwszy ruch należy do złodzieja. Policjant wygrywa, jeśli w swoim ruchu wejdzie na pole zajęte przez złodzieja. Złodziej wygrywa, jeśli jest w stanie uciekać w nieskończoność. Rozstrzygnij, który z graczy ma strategię wygrywającą. Wymagany czas: liniowy.
+
+3. Dany jest graf nieskierowany. Chcemy rozmieścić w niektórych wierzchołkach wyjścia ewakuacyjne tak, że w razie usunięcia jednego wierzchołka, z każdego innego będzie istniała droga do któregoś wyjścia. Znaleźć minimalną liczbę wyjść. Wymagany czas: liniowy.
+
+Zadania na 20 grudnia 2016:
+
+Próg maksymalnej oceny dla tego zestawu: 3 zadania.
+
+1. Dany jest graf skierowany. Wyznaczyć, ile najwięcej wierzchołków może odwiedzić (niekoniecznie prosta) ścieżka w tym grafie. Ten sam wierzchołek odwiedzony wielokrotnie liczymy tylko raz.
+
+Złożoność: liniowa.
+
+2. Bajtocja jest podzielona na k województw, w których łącznie znajduje się n miast. Dodatkowo, niektóre pary miast są połączone drogami (dwukierunkowymi, dwa miasta może łączyć co najwyżej jedna droga). W każdym województwie trzeba wybrać jedno miasto, które będzie jego stolicą, tak aby każda z istniejących dróg łączyła jakąś stolicę z innym miastem (potencjalnie także stolicą w innym województwie). Na wejściu dany jest podział miast na województwa oraz lista dróg. Napisać algorytm rozstrzygający, czy wybór stolic jest możliwy, i znajdujący taki wybór..
+
+Złożoność: O(n2).
+
+3. Rozwiąż zadanie 2 w złożoności O(n+m), gdzie m jest liczbą dróg.
+
+4. Dany jest spójny graf nieskierowany. Chcemy skierować wszystkie krawędzie tak, aby dla każdej pary wierzcholków v,w dało się dojść z v do w, podążając po krawędziach zawsze w kierunku skierowania. Udowodnij, że taka orientacja jest możliwa wtedy i tylko wtedy, gdy w grafie nie ma mostów.
+
+Złożoność: O(V+E).
+
+Zadania na 13 grudnia 2016:
+
+Próg maksymalnej oceny dla tego zestawu: 3 zadania.
+
+1. Dane jest drzewo binarne, którego liście są pokolorowane liczbami naturalnymi. Twoim zadaniem jest tak pokolorować pozostałe wierzchołki (czyli każdemu przypisać dowolną liczbę naturalną), aby zminimalizować liczbę krawędzi o różnokolorowych końcach. Twój algorytm powinien działać w czasie O(nlog2n), gdzie n jest liczbą wierzchołków drzewa.
+
+2. Zaprezentuj strukturę danych reprezentującą ciąg liczb całkowitych a1,…,an, obsługującą operacje:
+
+SET(i,v) - ustaw ai:=v,
+MAX() - zwróć maksymalną sumę spójnego podciągu ciągu a1,…,an.
+Obie operacje powinny wykonywać się w czasie O(logn).
+
+3. Zaprezentuj strukturę danych reprezentującą ciąg liczb całkowitych a1,…,an, obsługującą operacje:
+
+SET(i,j,v) - ustaw ak:=v dla każdego k∈{i,i+1,…,j},
+MAX(i,j) - zwróć wartość maksymalnego elementu ciągu ai,ai+1,…,aj.
+Obie operacje powinny wykonywać się w czasie O(logn).
+
+4. Ala napisała w zeszycie pewien ciąg a1,…,an, będący permutacją liczb od 1 do n, lecz Ci go nie ujawnia. Zamiast tego dla każdego elementu ciągu a zdradza Ci liczbę elementów stojących przed nim, które są od niego większe. Innymi słowy, otrzymujesz ciąg b1,…,bn, gdzie bi=∣∣{j:j<i∧aj>ai}∣∣. Twoim zadaniem jest odgadnąć ciąg a1,…,an, wykonując O(nlogn) operacji.
+
+5. Dany jest graf skierowany. Rozstrzygnąć w czasie liniowym, czy dla każdej pary wierzchołków x,y istnieje ścieżka z x do y lub z y do x.
+
+Zadania na 6 grudnia 2016:
+
+Próg maksymalnej oceny dla tego zestawu: 2 zadania.
+
+1. Zaprezentuj strukturę danych reprezentującą zbiór liczb, na której można wykonywać operacje:
+
+ADD(S,x) - dodaj liczbę x do zbioru S (chyba, że x∈S, wtedy operacja nie ma efektu),
+REMOVE(S,x) - usuń liczbę x ze zbioru S (jeśli x∉S, operacja nie ma efektu),
+SMALLEST_DIST(S) - zwróć najmniejszą odległość dwóch różnych liczb ze zbioru S (lub ∞, gdy |S|≤1).
+Wszystkie operacje powinny wykonywać się w czasie O(log|S|).
+
+2. Zaprezentuj strukturę danych reprezentującą zbiór liczb, na której można wykonywać operacje:
+
+CREATE() - zwróć nową strukturę reprezentującą zbiór pusty
+ADD(S,x) - dodaj liczbę x do zbioru S,
+CONTAINS(S,x) - sprawdź, czy liczba x jest w zbiorze S,
+MERGE(S1,S2) - zwróć strukturę dla sumy zbiorów S1 i S2, po tej operacji struktury S1 i S2 nie będą już używane.
+Ciąg dowolnych n operacji na tych strukturach powinien wykonywać się w czasie O(nlog2n).
+
+3. Dany jest ciąg n operacji INSERT, które wykonujemy na zwykłym BST bez żadnych rotacji, czyli zawsze nowy wierzchołek jest liściem. Dla każdej takiej operacji wypisać, kto będzie ojcem tego nowego liścia.
+
+Złożoność: O(nlgn).
+
+Zadania na 29 listopada 2016:
+
+Próg maksymalnej oceny dla tego zestawu: 2 zadania.
+
+1. Niech, dla każdego X⊆ℕ, zapis ΣX oznacza sumę liczb zbioru X. Dany jest zbiór liczb naturalnych A={a1,a2,…,an}. Wyznaczyć podział zbioru A na dwa rozłączne podzbiory B,C, który zminimalizuje różnicę |ΣB−ΣC|.
+
+Złożoność: O(n⋅ΣA).
+
+2. Na zbiorze {a,b,c} określone jest specjalne mnożenie ∘, dające wyniki z tego samego zbioru. Działanie nie musi być łączne ani przemienne.
+
+Dany jest napis postaci:
+
+x1∘x2∘…∘xn
+
+gdzie xj∈{a,b,c}. Rozstrzygnij, czy da się tak wstawić do niego nawiasy, aby wynikiem mnożenia było a. Wypisz odpowiednie nawiasowanie.
+
+Złożoność: O(n3).
+
+3. Mamy n żółwi, przy czym żółw o numerze i ma własną masę mi oraz wytrzymałość ti. Żółwie ustawiamy w piramidę, jeden na drugim. Wytrzymałość to maksymalna łączna masa, którą możemy ustawić na danym żółwiu.
+
+Napisz algorytm, który obliczy, ile najwięcej żółwi może liczyć piramida.
+
+Złożoność: O(n2).
+
+4. Dane jest n niebieskich i n czerwonych punktów na płaszczyźnie. Rozstrzygnąć, czy da się połączyć punkty w czerowno-niebieskie pary tak, żeby w każdej parze czerwony punkt był po lewej i wyżej od niebieskiego.
+
+Złożoność: O(nlogn).
+
+Zadania na 22 listopada 2016:
+
+Próg maksymalnej oceny dla tego zestawu: 3 zadania.
+
+1. W szeregu stoi n elfów, których atakuje Twoja kompania – n orków. Za chwilę odbędzie się seria pojedynków jeden na jednego, przy czym każdy z wojowników weźmie udział w dokładnie jednej walce. Ty decydujesz o tym, który ork będzie walczył z którym elfem. Każdy elf i każdy ork ma swoją siłę wyrażoną liczbą naturalną. W starciu zawsze wygrywa silniejszy wojownik, w razie remisu giną obaj. Za każdego pokonanego elfa Sauron wypłaci Ci 200 sztuk złota, za każdego utraconego orka musisz zapłacić mu 200 sztuk złota podatku. Jaki największy zysk możesz osiągnąć, odpowiednio dowodząc orkami?
+
+Złożoność: O(nlogn).
+
+To zadanie w wersji programistycznej można odnaleźć w serwisie Playground pod nazwą “Wyścigi ślizgaczy” (oczywiście uzyskanie za nie “OK” nie zastępuje dowodu poprawności algorytmu).
+
+2. W rurociągu jest n dziur, przez które wycieka ropa – z i-tej dziury wydostaje się di galonów na godzinę. Aby naprawić i-tą dziurę, trzeba poświęcić ti godzin. Ropa przestaje wyciekać od razu (na początku naprawiania), ale reperowania nie można przerwać przez cały wymagany czas. Przejście od jednej dziury do drugiej między naprawami jest natychmiastowe, można naraz pracować nad tylko jedną dziurą. Oblicz minimalną ilość ropy, jaka wypłynie z rurociągu.
+
+Złożoność: O(nlogn).
+
+3. Jak wiadomo, dla danego zbioru elementów A={a1,a2,a3,…,an} możliwe jest wiele drzew BST przechowujących zbiór A. Pokazać, że dowolne takie drzewo można zmienić w dowolne inne za pomocą O(n) rotacji.
+
+4. Rozważamy drzewa binarne, w których różnica między wysokością lewego i prawego poddrzewa wynosi co najwyżej 2 (analogicznie do drzew AVL). Pokazać, że istnieje taka wspólna stała c, że dla wszystkich takich drzew ich wysokość nie przekracza clogn, gdzie n to liczba elementów drzewa.
+
+Zadania na 15 listopada 2016:
+
+Próg maksymalnej oceny dla tego zestawu: 4 zadania. Proszę pamiętać o dowodach poprawności.
+
+1. Kelner musi obsłużyć n klientów restauracji. Na j-tego trzeba będzie poświęcić tj sekund i tylko jeden może być obsługiwany naraz. Czas oczekiwania klienta to suma czasów poświęconych wszystkim poprzednim, włącznie z nim samym. Kelner może dowolnie wybrać kolejność obsługi. Oblicz minimalną sumę czasów oczekiwania wszystkich klientów.
+
+Złożoność: O(nlogn).
+
+2. Dany jest zbiór n domkniętych przedziałów na osi liczbowej oraz liczby rzeczywiste a<b. Wyznaczyć podzbiór tych przedziałów o minimalnej liczności, taki że suma mnogościowa wybranych przedziałów zawiera przedział [a,b].
+
+Złożoność: O(nlogn).
+
+3. Danych jest n talii kart, o wielkościach a1,a2,…,an. W jednym ruchu możemy wybrać dwie dowolne talie i, j i wtasować je w siebie, co tworzy talię o wielkości ai+aj oraz zajmuje ai+aj czasu. Obliczyć minimalny czas potrzebny na połączenie wszystkich talii w jedną.
+
+Złożoność: O(nlogn).
+
+4. Dany jest zbiór n domkniętych przedziałów na osi liczbowej. Rozstrzygnij, czy da się każdemu przedziałowi przypisać należącą do niego liczbę całkowitą tak, by żadnym dwóm przedziałom nie przypisać tej samej liczby.
+
+Złożoność: O(nlogn).
+
+5. Zaproponuj rozwiązanie zadania N Wyprzedaż.
+
+Złożoność: O(n2logn).
+
+Zadania na 8 listopada 2016:
+
+Próg maksymalnej oceny dla tego zestawu: 3 zadania.
+
+1. Dane jest ukorzenione drzewo binarne o n wierzchołkach. Kolorujemy wszystkie wierzchołki drzewa na czerwono, zielono lub niebiesko, przy czym:
+
+rodzic nie może mieć takiego samego koloru jak syn,
+dwaj synowie tego samego rodzica muszą mieć różne kolory.
+Oblicz minimalną i maksymalną możliwą liczbę zielonych wierzchołków.
+
+Złożoność: O(n).
+
+2. Zbiór dominujący to taki podzbiór wierzchołków grafu, że każdy wierzchołek, który do tego zbioru nie należy, ma w tym zbiorze co najmniej jednego sąsiada. Dla drzewa o n wierzchołkach i liczby całkowitej dodatniej k oblicz resztę z dzielenia przez k liczby różnych zbiorów dominujących w tym drzewie.
+
+Złożoność: O(n).
+
+3. Pokrycie wierzchołkowe w grafie to taki zbiór jego wierzchołków, że co najmniej jeden z końców każdej krawędzi należy do tego zbioru. Dany jest n-wierzchołkowy graf skierowany o tej własności, że z każdego wierzchołka wychodzi dokładnie jedna krawędź. Znajdź najmniejsze pokrycie wierzchołkowe w tym grafie.
+
+Złożoność: O(n).
+
+4. Na płaszczyźnie znajduje się n lamp. Lampa numer i znajduje się w punkcie (xi,yi) i ma reflektor o szerokości kątowej αi. Lampy można dowolnie obracać. Naszym celem jest ustawienie ich tak, aby w zasięgu światła był jak najdłuższy początkowy fragment półprostej OX. Dokładniej, trzeba tak obrócić lampy, aby oświetlony był przedział [0,c] na osi OX dla jak największego c.
+
+Złożoność: O(n2n).
+
+5. Grupa n ludzi ustawia się w kółko, po czym każdy zamyka oczy i przypadkowo chwyta innych za ręce (może chwycić dwie różne osoby, albo tę samą osobę). W ten sposób formuje się tzw. węzeł ludzki, ponieważ ręce są najprawdopodobniej splecione. Celem gry jest rozplątanie węzła i ustawienie się w kółko bez puszczania rąk. Po zakończeniu zabawy każdy ma trzymać jedną ręką lewego sąsiada, a drugą prawego sąsiada na okręgu.
+
+Na wejściu dane jest, dla każdej osoby, kogo trzyma lewą, a kogo prawą ręką. Oblicz minimalną liczbę ruchów potrzebną do osiągnięcia celu lub stwierdź, że jest to niemożliwe. Dla uproszczenia zakładamy, że każdy ruch polega na przemieszczeniu się jednej osoby na inne miejsce na okręgu
+
+Złożoność: O(n2logn).
+
+Zadania na 25 października 2016:
+
+Próg maksymalnej oceny dla tego zestawu: 2 zadania.
+
+1. Każde pole prostokątnej planszy n×m zawiera zero lub jedynkę. Znajdź największy kwadrat zawierający wyłącznie jedynki.
+
+Złożoność: O(nm).
+
+2. Alicja i Boguś grają w następującą grę: planszą jest DAG, na którego krawędziach napisane są kwoty. Na początku gry Alicja ustawia pionek w dowolnie wybranym wierzchołku. Następnie, zaczynając od Bogusia, gracze na przemian przesuwają pionek wzdłuż krawędzi, płacąc temu drugiemu odpowiednią dla tej krawędzi kwotę. Gra kończy się, gdy nie można już wykonać żadnego ruchu.
+
+W którym wierzchołku Alicja powinna postawić pionek, żeby zyskać jak najwięcej, przy założeniu, że gracze grają optymalnie?
+
+Złożoność: liniowa od rozmiaru grafu.
+
+3. Na planszy podzielonej na n×n kwadratów jednostkowych leżą diamenty – na każdym polu co najwyżej jeden diament. Plansza zadana jest jako kwadratowa tablica zer i jedynek – jedynki tam, gdzie diament jest, zero gdzie go nie ma. Wyruszamy z lewego górnego rogu planszy i wykonujemy ruchy o jedno pole wyłącznie w prawo i w dół, a po dojściu do prawego dolnego rogu wracamy wykonując ruchy w lewo i do góry. W drodze powrotnej możemy przechodzić przez te same lub inne pola, ale żadnego diamentu nie da się wziąć dwa razy. Obliczyć, ile najwięcej diamentów możemy zebrać.
+
+Złożoność: O(n3).
+
+4. Biegnący po dnie morza rurociąg okazał się wadliwy – w pewnej chwili materiał nie wytrzymał i w rurociągu pojawiło się n dziur. Dziura numer j (dla 1≤j≤n) jest odległa o aj kilometrów od początku rury i w każdej godzinie wypływa z niej dj baryłek ropy.
+
+Twoim zadaniem jest powstrzymanie katastrofy ekologicznej – w tym celu masz do dyspozycji robota naprawczego, który zostanie zrzucony z helikoptera w wybranym przez Ciebie miejscu. Robot może poruszać się w obu kierunkach z prędkością 1 kilometra na godzinę, naprawiając (w zerowym czasie) każdy fragment rurociągu, na którym się znajdzie.
+
+Do Ciebie należy sterowanie robotem – zminimalizuj liczbę baryłek, która zdąży wypłynąć z rurociągu. Liczymy wyciek od momentu zrzucenia robota.
+
+Złożoność: O(n2).
+
+Zadania na 18 października 2016:
+
+Próg maksymalnej oceny dla tego zestawu: 4 zadania.
+
+1. Dany jest ciąg liczb całkowitych o długości n. Dla wszystkich pozycji i wyznacz długość najdłuższego podciągu rosnącego zawierającego element na pozycji i.
+
+Złożoność: O(nlogn).
+
+2. Dane są dwa słowa, każde o długości n. Wyznaczyć najkrótsze słowo zawierające oba jako podciąg.
+
+Złożoność: O(n2).
+
+3. Dane są dwa słowa, każde o długości n. Wyznaczyć ich najdłuższe wspólne podsłowo (spójny podciąg).
+
+Złożoność: O(n2).
+
+4. Na planszy podzielonej na n×n kwadratów jednostkowych leżą diamenty – na każdym polu co najwyżej jeden diament. Plansza zadana jest jako kwadratowa tablica zer i jedynek – jedynki tam, gdzie diament jest, zero gdzie go nie ma. Wyruszamy z lewego górnego rogu planszy i wykonujemy ruchy o jedno pole wyłącznie w prawo i w dół. Obliczyć, ile najwięcej diamentów możemy zebrać.
+
+Złożoność: O(n2).
+
+5. Dane jest słowo o długości n. Wyznaczyć najdłuższy podciąg (niekoniecznie spójny), który jest palindromem.
+
+Złożoność: O(n2).
+
+6. W rzędzie stoi n mikstur, każda pewnego typu, oznaczonego liczbą całkowitą od 0 do 99. Zamierzasz mieszać po dwie sąsiednie mikstury, ustawiając rezultat mieszania na miejscu składników, aż do momentu, w którym zostaniesz z jedną miksturą. Zmieszanie mikstur o typach a i b prowadzi do powstania mikstury o typie (a+b)mod100, a przy okazji wydziela się a⋅b dymu. Wyznacz kolejność mieszania, która minimalizuje łączną ilość dymu.
+
+Złożoność: O(n3).
+
+Zadania na 11 października 2016:
+
+Próg maksymalnej oceny dla tego zestawu: 4 zadania.
+
+1. Oblicz, ile jest liczb całkowitych dodatnich o n cyfrach, w których nie występuje jako spójny fragment liczba 13. Aby nie operować na dużych liczbach, podaj resztę z dzielenia wyniku przez 109+7.
+
+Złożoność: O(n) (istnieją szybsze algorytmy, ale taki wystarczy).
+
+2. Oblicz, ile jest liczb całkowitych dodatnich o n cyfrach, które są podzielne przez 3, a w których nie występuje jako spójny fragment liczba 13. Aby nie operować na dużych liczbach, podaj resztę z dzielenia wyniku przez 109+7.
+
+Złożoność: O(n) (istnieją szybsze algorytmy, ale taki wystarczy).
+
+3. Rozważmy następujący algorytm rozwiązujący zadanie “Mosiężny Most”:
+
+Sortujemy wartości filarów malejąco: a1≥a2≥…≥an.
+Dla każdego i=1,2,…,n, jeśli wzięcie filara ai nie spowoduje zawalenia się mostu (nieobecności trzech kolejnych filarów), to bierzemy go, w przeciwnym wypadku ignorujemy.
+Wskaż dane, dla których ten algorytm da błędną odpowiedź.
+
+4. Pokaż, jak zmienić rozwiązanie zadania “Remont autostrady” tak, aby oprócz minimalnego kosztu podawane było również rozwiązanie – współrzędne wszystkich przyłożonych łat.
+
+5. Znajdź rozwiązanie problemu plecakowego o złożoności O(nV), gdzie V=v1+v2+…+vn jest sumą wartości przedmiotów. W szczególności, czas działania nie powinien zależeć od pojemności plecaka ani od wag przedmiotów.

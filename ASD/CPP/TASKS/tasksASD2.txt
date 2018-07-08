@@ -1,0 +1,218 @@
+Zadania na 9 czerwca 2017:
+
+(próg maksymalnej oceny: 2 zadania)
+
+1. Pasza dla krów mlecznych musi dostarczać odpowiednią liczbę węglowodanów, białek i tłuszczu. Na rynku dostępne są dwie pasze. Jedna kosztuje 25 euro za paczkę i zawiera 2 kg węglowodanów, 2 kg białek i 2 kg tłuszczu. Druga kosztuje 20 euro za paczkę i zawiera 1 kg węglowodanów, 9 kg białek i 3 kg tłuszczu. W jakiej proporcji należy mieszać pasze, tak aby jak najmniejszym kosztem uzyskać mieszankę zawierającą 12 kg węglowodanów, 36 kg białek i 24 kg tłuszczu? Rozwiązanie powinno zawierać dowód optymalności, wolno używać twierdzeń podanych na wykładzie/ćwiczeniach. Zalecamy rysunki.
+
+2. Sformułuj problem wyznaczania długości najkrótszej ścieżki między parą wierzchołków w grafie nieskierowanym jako zadanie programowania liniowego tak, aby wielkość zadania była wielomianowa od wielkości grafu.
+
+3. Problem maksymalnego przepływu o minimalnym koszcie formułuje się następująco:
+
+Dana jest sieć przepływowa – graf o zadanych przepustowościach. Dodatkowo, każda krawędź ma zadany koszt posłania jednostki przepływu (potencjalnie różny w obie strony). Koszt przepływu to suma kosztów wszystkich jednostek na wszystkich krawędziach, gdzie przepływ jest niezerowy. Dla zadanej wartości f, jaki jest najtańszy (pod względem kosztu) przepływ o wartości przynajmniej f?
+
+Sformułować ten problem jako zadanie programowania liniowego tak, aby jego długość była wielomianowa od rozmiaru danych.
+
+Zadania na 2 czerwca 2017:
+
+(próg maksymalnej oceny: 3 zadania)
+
+1. Ciąg (xn)∞n=0 dany jest wzorem rekurencyjnym
+
+xn=Axn−1+Bxn−2+C.
+
+Dane są współczynniki A,B,C, dwa pierwsze wyrazy ciągu x0,x1, oraz liczby k i M (wszystkie dane są całkowite). Wyznaczyć xk modulo M·
+
+Złożoność: O(logk).
+
+2. Dany jest graf nieskierowany G=(V,E). Wyznaczyć liczbę ścieżek z wierzchołka numer 1 do wierzchołka n, które mają długość dokładnie k krawędzi. Wierzchołki na ścieżce nie muszą być wszystkie różne. Możesz założyć, że obliczenia prowadzone są modulo pewne całkowite M.
+
+Złożoność: O(|V|3logk).
+
+3. Mrówka chodzi po krawędziach sześcianu. W jednym ruchu wychodzi z pewnego wierzchołka sześcianu i przechodzi krawedzią do jednego z sasiednich wierzchołków. Droga mrówki jest ciekawa, jesli nie zawraca, tzn. bezpośrednio po wejsciu do wierzchołka jakąś krawędzią następny ruch wykonuje wzdłuż innej krawędzi. Na ile ciekawych sposobów mrówka może przejść między dwoma przeciwległymi wierzchołkami sześcianu, wykonując dokładnie k ruchów?
+
+Złożoność: O(logk).
+
+4. Dane są słowa W i T nad alfabetem składającym się z liter a...z i pytajnika. Ustalić, czy W występuje w T jako podsłowo przy założeniu, że pytajnik pasuje do każdej pojedynczej litery/pytajnika.
+
+Złożoność: O(nlogn).
+
+Zadania na 26 maja 2017:
+
+(próg maksymalnej oceny: 2 zadania)
+
+1. Dany jest zbiór S będący podzbiorem {1,2,…,n}. Wyznaczyć liczbę trzyelementowych ciągów arytmetycznych, które znajdują się w S.
+
+Złożoność: O(nlogn).
+
+2. Dany jest zbiór S będący podzbiorem {−n,…,−1,0,1,…,n}. Rozstrzygnąć, czy istnieją a,b,c∈S, takie że a+b+c=0.
+
+Złożoność: O(nlogn).
+
+3. Dane są słowo W i tekst T nad alfabetem {0,1}. Znaleźć w słowie T podsłowo długości |W|, które jest najbardziej podobne do W, czyli ma te same znaki na największej liczbie pozycji.
+
+Złożoność: O(nlogn).
+
+Zadania na 5 maja 2017:
+
+(próg maksymalnej oceny: 1 zadanie)
+
+1. Rozważamy sytuację jak na obrazku w komiksie: prosta y=0 jest powierzchnią ziemi, na którą z dużej wysokości spada n punktowych kulek, przy czym każda początkowo porusza się w dół wzdłuż pewnej prostej x=ci dla i=1,2,…,n. Dodatkowo na obrazku jest m parami rozłącznych poziomych odcinków. Jeśli kulka spadając natrafi na odcinek, po chwili stoczy się z jednego z jego końców – dla każdego odcinka podane jest, czy kulka zawsze stacza się z niego na prawo, czy też zawsze na lewo.
+
+Dla każdej kulki wyznacz punkt na powierzchni ziemi, na który spadnie.
+
+Złożoność: O(n+mlog(n+m)). Akceptowane będą również rozwiązania z dodatkowymi czynnikami logarytmicznymi.
+
+2. Dany jest zbiór n punktów na płaszczyźnie. Wybierz z nich co najwyżej 4, tak aby pole wypukłej otoczki wybranych punktów było możliwie duże.
+
+Złożoność: O(n2logn).
+
+3. Dane są dwa wielokąty wypukłe na płaszczyźnie, o odpowiednio n i m wierzchołkach podanych w kolejności zgodnie z ruchem wskazówek zegara. Wyznacz pole przecięcia tych wielokątów. próg Złożoność: O(n+m).
+
+Zadania na 28 kwietnia 2017:
+
+(próg maksymalnej oceny: 4 zadania)
+
+1. Dany jest zbiór różnych słów A nad alfabetem Σ. Znaleźć najkrótsze słowo, które zawiera co najmniej dwa słowa z A jako spójne fragmenty.
+
+Złożoność: O(∑x∈A|x|).
+
+2. Dany jest zbiór S punktów w przestrzeni. Rozstrzygnij, czy wszystkie leżą w jednej płaszczyźnie. Nie wolno posługiwać się liczbami zmiennoprzecinkowymi.
+
+Złożoność: O(n), gdzie n=|S|.
+
+3. Dany jest ciąg punktów P1,P2,…,Pn na płaszczyźnie. Rozstrzygnij, czy istnieje taka prosta, że rzuty prostopadłe punktów na tę prostą leżą na niej w tej samej kolejności.
+
+Złożoność: O(nlogn).
+
+4. Dany jest zbiór S punktów na płaszczyźnie. Znajdź najmniejszą grubość kreski (paska ograniczonego równoległymi prostymi), która przykryje wszystkie punkty z S.
+
+Złożoność: O(nlogn), gdzie n=|S|.
+
+5. Dany jest zbiór S punktów na płaszczyźnie. Znajdź parę punktów z S, których odległość jest największa.
+
+Złożoność: O(nlogn), gdzie n=|S|.
+
+Zadania na 7 kwietnia 2017:
+
+(próg maksymalnej oceny: 3 zadania)
+
+1. Dane są dwa słowa x i y. Znaleźć najdłuższy fragment, który występuje jako spójne podsłowo obu słów.
+
+Złożoność: O(nlogn).
+
+2. Niech p(w) oznacza liczbę prefikso-sufiksów słowa w. Dane jest słowo s i niech s[i,j] oznacza podsłowo od i-tej do j-tej litery s włącznie.
+
+Obliczyć sumę ∑i≤jp(s[i,j]).
+
+Złożoność: O(nlog2n) (da się szybciej, ale nie różnicujemy punktowo).
+
+3. Mamy tekst t, który chcemy nasmarować na ścianie. Chcemy to zrobić poprzez (być może wielokrotne) przybijanie pojedynczej pieczątki. Pieczątka musi składać się z jakiegoś spójnego fragmentu tekstu t. Każda litera tekstu może być przybijana dowolną liczbę razy, ale nie można nadpisywać wcześniej przybitej litery inną.
+
+Przykład: jeśli chcemy napisać aabaabaa, możemy to zrobić za pomocą dwukrotnego przybicia pieczątki aabaa.
+
+W najgorszym przypadku potrzebujemy pieczątki złożonej z całego tekstu. Mając dane t, znajdź najkrótszą dobrą pieczątkę.
+
+Złożoność: O(|t|log|t|).
+
+4. Podwójnym palindromem nazywamy słowo postaci pp, gdzie p jest palindromem, na przykład abaaba. Mając dane słowo w, znajdź liczbę jego podsłów, które są podwójnymi palindromami. Wielokrotne wystąpienia identycznych podsłów licz wielokrotnie.
+
+Złożoność: O(|w|log|w|).
+
+5. Dana jest permutacja σ ciągu (1,2,…,n). Rozstrzygnij, czy istnieje słowo złożone z małych liter a .. z alfabetu angielskiego, dla którego ta permutacja jest tablicą sufiksową (czyli: czy istnieje takie słowo, którego sufiksy uporządkowane leksykograficznie ułożyłyby się w kolejności σ(1),…,σ(n)).
+
+Złożoność: O(n) (rozwiązania z dodatkowym czynnikiem logn albo log2n, jeśli istnieją, też zostaną zaakceptowane).
+
+Zadania na 31 marca 2017:
+
+(próg maksymalnej oceny: 3 zadania)
+
+Podsłowo słowa t to jego dowolny (być może pusty) spójny podciąg.
+
+1. Antypalindromem nazywamy słowo nad alfabetem {0,1}, które poddane operacji odwrócenia, a następnie zamianie zer na jedynki i jedynek na zera stanie się na powrót słowem wyjściowym. Antypalindromem jest na przykład 011001 – po odwróceniu zmienia się w 100110, a po zamianie zer i jedynek z powrotem 011001.
+
+Dane jest słowo w nad alfabetem {0,1}, znaleźć najdłuższy antypalindrom występujący w nim jako podsłowo.
+
+Złożoność: O(|w|).
+
+2. Dany jest wzorzec p oraz tekst t. Wzorzec może zawierać, być może wielokrotnie, specjalny symbol *, który pasuje do dowolnego podsłowa. Stwierdź, czy tekst t zawiera podsłowo pasujące do wzorca p.
+
+Złożoność: O(|p|+|t|).
+
+3. Niech u i v będą słowami, przy czym uv=vu. Udowodnij, że istnieje słowo w oraz liczby naturalne k i l takie, że u=wk, v=wl.
+
+4. Dane są dwa słowa u i v jednakowej długości. Rozstrzygnąć, czy da się otrzymać u z v przez obrót cykliczny (czyli zamianę na słowo cyklicznie równoważne) oraz zmianę litery na jednej pozycji.
+
+Złożoność: O(|u|).
+
+Zadania na 24 marca 2017:
+
+(próg maksymalnej oceny: 2 zadania)
+
+1. Dany jest zbiór projektów P oraz zbiór narzędzi N. Wykonanie projektu pi∈P wymaga pewnego zestawu narzędzi ni⊂N. Zakupione raz narzędzie może być wielokrotnie wykorzystywane do projektów. Wykonanie każdego projektu daje pewien zysk (być może różny dla różnych projektów), a zakup narzędzi kosztuje (być może różnie dla różnych narzędzi). Wyznacz maksymalny sumaryczny zysk netto.
+
+Złożoność: O((|P|+|N|)3)
+
+2. W turnieju szachowym startuje n zawodników, każda para rozgrywa między sobą mecz. Zwycięzca otrzymuje 1 punkt, przegrany 0, w razie remisu obaj otrzymują po 0,5 punkta. Zwycięzcą zostaje gracz, który ma największą liczbę punktów, jeśli jest takich więcej – decyduje losowanie.
+
+Niektóre mecze zostały już zakończone (i znane są już ich wyniki), pozostałe dopiero będą rozegrane. Znajdź algorytm, który rozstrzygnie, czy gracz numer 1 ma jeszcze szansę wygrać turniej.
+
+Złożoność: wielomianowa od n.
+
+3. Grupa s szpiegów stoi w wierzchołku x grafu G o n wierzchołkach i m krawędziach. Szpiedzy chcą przejść do pewnego innego wierzchołka y tak, aby zbyt wielu nie pojawiło się w tym samym miejscu.
+
+Ryzyko krawędzi to liczba szpiegów, którzy tą krawędzią przeszli (w dowolnym momencie). Znaleźć trasy szpiegów, dla których największe ryzyko krawędzi jest minimalne.
+
+Złożoność: O(mn) (!).
+
+4. Mając dany ważony graf skierowany G o n wierzchołkach i m krawędziach oraz wyróżnione wierzchołki x i y, rozstrzygnij, czy istnieje jeden, czy wiele różnych minimalnych przekrojów rozdzielających x od y.
+
+Złożoność: wielomianowa od n.
+
+Zadania na 17 marca 2017:
+
+(próg maksymalnej oceny: 3 zadania)
+
+1. Dany jest graf skierowany. Rozstrzygnij, czy istnieje podział zbioru wierzchołków tego grafu na rozłączne podzbiory tak, aby każdy podzbiór stanowił cykl skierowany (cykle muszą mieć przynajmniej 2 elementy).
+
+Złożoność: O(V‾‾√E).
+
+2. W grafie dwudzielnym szukamy minimalnego pokrycia wierzchołkowego, czyli najmniejszego takiego zbioru wierzchołków, że każda krawędź ma przynajmniej jeden z końców w tym zbiorze. Udowodnij, że liczność takiego zbioru jest równa liczności maksymalnego skojarzenia w tym samym grafie.
+
+Wskazówka: Wykorzystaj twierdzenie Forda-Fulkersona.
+
+3. Dana jest przypominająca szachownicę plansza o wymiarach n×m. Niektóre pola są poplamione, a niektóre czyste. Na każdym czystym polu można postawić wieżę. Wyznacz maksymalną liczbę wież, które można postawić na planszy tak, aby żadne dwie się nie szachowały.
+
+Złożoność: O(nmn+m‾‾‾‾‾‾√).
+
+4. Problem hydraulika: dana jest prostokątna plansza złożona z m×n kwadratowych płytek, z których każda jest jedną z podanych na rysunku:
+
+/view/Subpage/4138500/content_files/plytki.png/plytki.png
+Celem jest obrócenie niektórych płytek o wielokrotność 90∘ tak, by krawędzie “pasowały” do siebie, czyli żadna krawędź płytki oznaczona czarną kreską nie stykała się z pustą krawędzią ani brzegiem planszy.
+
+Pokaż, że jeśli na planszy nie ma płytek typu “prosta linia” (trzecia od lewej na rysunku), to da się w czasie wielomianowym rozstrzygnąć, czy żądane obrócenie płytek jest możliwe.
+
+Złożoność: O((mn)3/2).
+
+Zadania na 10 marca 2017:
+
+(próg maksymalnej oceny: 3 zadania)
+
+Uwaga do zadań 1 i 2: ponieważ nie sprecyzowaliśmy, czy chodzi o graf skierowany, czy nieskierowany, można przyjąć dowolnie.
+
+1. Mając dany graf G o n wierzchołkach i m krawędziach oraz wyróżnione wierzchołki x, y i z, rozstrzygnij, czy istnieją dwie rozłączne krawędziowo ścieżki: jedna łącząca x z y, a druga łącząca x z z.
+
+Złożoność: O(m+n).
+
+2. Dany jest graf G o n wierzchołkach i m krawędziach oraz wyróżnione wierzchołki x,y1,y2,…,y7. Rozstrzygnij, czy istnieją ścieżki łączące x ze wszystkimi yi dla i=1,2,…,7, parami rozłączne wierzchołkowo.
+
+Złożoność: O(m+n).
+
+3. Podaj przykład grafu, który jest nieskierowany, spójny, ma 1000 wierzchołków, z których dwa są wyróżnione i w którym jest przynajmniej 1040 różnych minimalnych przekrojów rozdzielających wyróżnione wierzchołki. Przyjmujemy, że wszystkie krawędzie mają tę samą wagę.
+
+4. Dane są dwa ciągi liczb naturalnych: p=(p1,p2,…,pn) i q=(q1,q2,…,qm). Odpowiedz na pytanie czy istnieje prosty graf dwudzielny G=(U,V,E) spełniający |U|=n, |V|=m i E⊆U×V w którym p jest ciągiem stopni wierzchołków z U, a q jest ciągiem stopni wierzchołków z V.
+
+Złożoność: O(n2m2).
+
+5. Posłowie głosują nad ważną ustawą. Część z nich jest za, a część nawet przeciw. Ale wcale nie głosują w sposób, który uważają za słuszny. Na ich decyzje wpływają bowiem preferencje kolegów. Dany jest ciąg n preferencji posłów (ZA/PRZECIW) oraz nieskierowany graf reprezentujący relację “poseł a i poseł b przyjaźnią się”. Liczymy jeden punkt nieszczęścia za każdego posła, który głosuje niezgodnie ze swoją preferencją, oraz jeden za każdą parę przyjaźniących się posłów, którzy staną po przeciwnych stronach. Wyznacz taki sposób głosowania, który będzie generował najmniej nieszczęścia.
+
+Złożoność: O(n3).
