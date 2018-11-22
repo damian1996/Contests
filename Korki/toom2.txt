@@ -1,0 +1,103 @@
+def TOOM2A(wsp1, wsp2):
+	s1 = len(wsp1)
+	s2 = len(wsp2)
+
+	if s1 > s2:
+		for i in range(s1-s2):
+			wsp2.append(0)
+	elif s1 < s2:
+		for i in range(s2-s1):
+			wsp1.append(0)
+	
+	# potega dwojki
+	k = 1
+	while True:
+		if len(wsp1) > k:
+			k = k * 2
+		elif len(wsp1) == k:
+			break
+		else:
+			for i in range(k-len(wsp1)):
+				wsp1.append(0)
+				wsp2.append(0)
+			break
+
+	poly = TOOM2B(wsp1, wsp2)
+	newSize = len(poly)
+	lp = len(poly)
+	cutPoly = []
+	for i in range(len(poly)):
+		if poly[lp-1-i] == 0:
+			newSize -= 1
+		else:
+			break
+
+	for i in range(newSize):
+		cutPoly.append(poly[i])		
+
+	return cutPoly
+
+def TOOM2B(wsp1, wsp2):
+	print("wielomiany ", wsp1, wsp2)
+	siz = len(wsp1)
+	if siz == 1:
+		oneElement = []
+		oneElement.append(wsp1[0]*wsp2[0])
+		return oneElement
+	else:
+		siz2 = int(siz/2)
+		print("rozmiar przez 2 czyli ", siz2)
+		wspA1, wspA2, wspB1, wspB2 = ([] for i in range(4))
+		#splitting - dziele na k(2) czesci
+		print("splitting")
+		for i in range(siz2):
+			wspA1.append(wsp1[i])
+			wspA2.append(wsp1[siz2 + i])
+			wspB1.append(wsp2[i])
+			wspB2.append(wsp2[siz2 + i])
+		print(wspA1, wspA2, wspB1, wspB2)
+		#evaluation
+		#wielomiany wspA2*y + wspA1 oraz wspB2*y + wspB1
+		# czyli musze ewaluowac w 3 punktach.. niech to beda -1, 0, 1
+		# c = [a[i]+b[i] for i in range(len(a))]
+		p = [[]  for i in range(3)]
+		q = [[]  for i in range(3)]
+
+		p[0] = wspA1 #0
+		p[1] = [wspA2[i] + wspA1[i] for i in range(siz2)] #1
+		p[2] = [wspA1[i] - wspA2[i] for i in range(siz2)] #-1
+
+
+		q[0] = wspB1
+		q[1] = [wspB2[i] + wspB1[i] for i in range(siz2)]
+		q[2] = [wspB1[i] - wspB2[i] for i in range(siz2)] # 2 to -1
+
+		print("ewaluacja")
+		print(p, q)
+		# rekurencja
+		for i in range(3):
+			p[i] = TOOM2B(p[i], q[i])
+
+		print("rekurencja")
+		print(p)
+		print("po rekurencji")
+
+		print("interpolacja")
+		#[[1, 0, 0], [0, 1/2, -1/2], [-1, 1/2, 1/2]]
+		q[0] = p[0]		
+		q[1] = [(p[1][i] - p[2][i])/2 for i in range(len(p[i]))]
+		q[2] = [-p[0][i] + (p[1][i] + p[2][i])/2 for i in range(len(p[i]))]
+
+		#wzorek
+		#w1(x) * w2(x) = sum i=0 to 2k (r_i * x^{i*k^{c-1}})
+		wynik = [0 for i in range(2*siz)]
+		for i in range(3):
+			for j in range(len(q[i])):
+				wynik[i*siz2+j] = wynik[i*siz2+j] + q[i][j]
+				#wynik.append(q[i][j])
+		print("wynik to " , wynik)
+		return wynik
+
+def TOOM2(wsp1, wsp2):
+	poly = TOOM2A(wsp1, wsp2)
+	return poly

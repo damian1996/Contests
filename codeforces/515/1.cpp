@@ -21,9 +21,12 @@ const LL p = 1000000007;
 int main() {
   std::ios::sync_with_stdio(false);
   int n, m, t;
-  int changes = 0;
-  for(int i=0; i<=n; i++) {
-    4.p
+  LL L, v, r, l;
+  cin >> t;
+  while(t--) {
+    cin >> L >> v >> l >> r;
+    int lanterns = L/v - r/v + (l-1)/v;
+    cout << lanterns << endl;
   }
   return 0;
 }

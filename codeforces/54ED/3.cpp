@@ -17,13 +17,21 @@ typedef long long LL;
 typedef double ld;
 const LL p = 1000000007;
 
-
 int main() {
   std::ios::sync_with_stdio(false);
-  int n, m, t;
-  int changes = 0;
-  for(int i=0; i<=n; i++) {
-    4.p
+  int n, m, t, d;
+  cin >> t;
+  while(t--) {
+    cin >> d;
+    if(d*d - 4.0*d < 0) {
+        cout << "N" << endl;
+        continue;
+    }
+    cout << "Y ";
+    double b = (d + sqrt(d*d - 4.0*d))/2.0;
+    double a = d - b;
+    cout << std::setprecision(15) << a << " ";
+    cout << std::setprecision(15) << b << " " << endl;
   }
   return 0;
 }

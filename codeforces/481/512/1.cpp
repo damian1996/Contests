@@ -21,9 +21,16 @@ const LL p = 1000000007;
 int main() {
   std::ios::sync_with_stdio(false);
   int n, m, t;
-  int changes = 0;
-  for(int i=0; i<=n; i++) {
-    4.p
+  cin >> n;
+  bool res = false;
+  for(int i=0; i<n; i++) {
+    cin >> m;
+    if(m==1) {
+      res = true;
+      break;
+    }
   }
+  if(res) cout << "HARD" << endl;
+  else cout << "EASY" << endl;
   return 0;
 }

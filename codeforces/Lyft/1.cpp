@@ -17,13 +17,18 @@ typedef long long LL;
 typedef double ld;
 const LL p = 1000000007;
 
-
 int main() {
   std::ios::sync_with_stdio(false);
-  int n, m, t;
-  int changes = 0;
-  for(int i=0; i<=n; i++) {
-    4.p
-  }
+  int n, m, t, k;
+  int ax, ay, bx, by, cx, cy;
+  cin >> n;
+  cin >> ax >> ay;
+  cin >> bx >> by;
+  cin >> cx >> cy;
+  bool res = true;
+  if((bx >= ax && cx <= ax) || (bx <= ax && cx >= ax)) res = false;
+  if((by >= ay && cy <= ay) || (by <= ay && cy >= ay)) res = false;
+  if(res) cout << "YES" << endl;
+  else  cout << "NO" << endl;
   return 0;
 }

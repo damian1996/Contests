@@ -21,9 +21,10 @@ const LL p = 1000000007;
 int main() {
   std::ios::sync_with_stdio(false);
   int n, m, t;
-  int changes = 0;
-  for(int i=0; i<=n; i++) {
-    4.p
-  }
+  string s1, s2;
+  cin >> s1 >> s2;
+  string res(max(s1.size(), s2.size()));
+  char carry;
+  for(int i=s1.size()-1, j=s2.size()-1; i<=)
   return 0;
 }
