@@ -19,8 +19,31 @@ const LL p = 1000000007;
 
 
 int main() {
-  std::ios::sync_with_stdio(false);
-  int n, m, t;
+    long long n, sum = 0;
+    cin >> n;
+    vector<long long> vec(n);
+    vector<pair<LL, LL>> edges;
+    for(int i=0; i<n; i++) cin >> vec[i];
+    std::sort(vec.begin(), vec.end());
+    int leaves = 0, maxi = 0, sum = 0, nodes = 0;
+    for(int i=0; vec[i] < 2; i++) if(vec[i] == 1) leaves++;
+    for(int i=0; vec[i]<=leaves; i++) {
+        nodes++;
+        if(vec[i] <= leaves && vec[i] > maxi) {
+            maxi = vec[i];
+        }
+    }
+    for(int i=0; vec[i] <= maxi; i++) {
+        sum += vec[i];
+        if(sum == 2*i)
+            cout << "TRUE" << endl;
+    }
 
-  return 0;
+    for(int i=0; i<n; i++) {
+
+    }
+    for(int i=0; i<edges.size(); i++) {
+        printf("%d %d\n", edges[i].first+1, edges[i].second+1);    
+    }
+    return 0;
 }

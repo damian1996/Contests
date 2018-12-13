@@ -37,3 +37,18 @@ int main() {
   cout << result << endl;
   return 0;
 }
+
+
+if(addition[i-1] == 0) {
+                    cout << "ONE" << endl;
+                    zeroes[i] = (zeroes[i-1] > 0) ? zeroes[i-1] - 1 : 0;
+                    addition[i] = 1;
+                } else if(allNine(addition[i-1]) == true) { // a co jesli nie ma zer? to chyba jest OK, ale lepiej sprawdz dzbanie
+                    cout << "SEC" << endl;
+                    zeroes[i] = (zeroes[i-1] > 0) ? zeroes[i-1] - 1 : 0;
+                    addition[i] = addition[i-1] + 1;
+                } else {
+                    cout << "THI" << endl;
+                    addition[i] = addition[i-1] + 1;
+                    zeroes[i] = zeroes[i-1];
+                }
