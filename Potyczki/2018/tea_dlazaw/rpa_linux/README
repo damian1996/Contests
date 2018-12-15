@@ -1,0 +1,80 @@
+                                  INSTALACJA
+
+Rozpakuj archiwum w dogodnym miejscu. Jeśli pobrałeś wersję 'minial',
+skompiluj parunner (patrz [RE]KOMPILACJA parunner-a) i stwórz plik config.json
+(w folderze, w którym rozpakowałeś archiwum) (patrz KONFIGURACJA)
+
+                                    UŻYCIE
+Patrz python rpa.py -h
+
+                            [RE]KOMPILACJA parunner-a
+* Zainstaluj 'go' (instrukcję instalacji znajdziesz na
+  https://golang.org/doc/install).
+* Skompiluj parunner-a, wchodząc do folderu src/parunner i wykonując
+
+    go build
+
+* Skopiuj plik wykonywalny (parunner) do podkatalogu executable/:
+
+    cp parunner ../../executable/
+
+                              KONFIGURACJA
+Konfiguracja jest przechowywana w pliku config.json, w folderze, w którym
+archiwum zostało rozpakowane. Kilka przykładowych konfiguracji jest dostępnych
+w folderze sample-configs/
+
+Plik konfiguracyjny powinien zawierać pojedynczy obiekt o następujących polach:
+ * c-compiler - polecenie używane do kompilacji plików napisanych w C.
+ * c-compiler-flags - lista flag używanych do kompilacji plików w C.
+ * cpp-compiler - polecenie używane do kompilacji plików napisanych w C++.
+ * cpp-compiler-flags - lista flag używanych do kompilacji plików w C++.
+ * parunner-file - nazwa pliku wykonywalnego parunner
+Możesz dojść do właściwych wartości tych pól, próbując ręcznie skompilować
+i uruchomić prosty program korzystający z biblioteki 'message'
+(patrz RĘCZNA KOMPILACJA I URUCHAMIANIE ROZWIĄZAŃ).
+
+                RĘCZNA KOMPILACJA I URUCHAMIANIE ROZWIĄZAŃ
+* Skompiluj bibliotekę 'message'
+
+  libraries/message_internal.c
+  libraries/zeus_local.c
+
+* Skompiluj rozwiązanie
+* Uruchom rozwiązanie, korzystając z parunner
+
+  parunner ścieżka-do-skompilowanego-rozwiązania -n=liczba-instancji
+
+        KONFIGURACJA MinGW NA POTRZEBY RPA (dotyczy systemu Windows)
+* Zainstaluj MinGW, korzystając z instrukcji w:
+
+  http://www.mingw.org/wiki/Getting_Started
+
+  upewnij się, że poniższe pakiety są zainstalowane:
+    * mingw32-binutils
+    * mingw32-gcc
+    * mingw32-gcc-g++
+    * mingw32-libz
+    * msys-base
+    * msys-console
+    * msys-zlib
+* Zainstaluj Pythona z:
+
+  https://www.python.org/downloads/release/python-2710/
+
+* Dodaj poniższą linię (zamieniając /c/python27, jeśli nie użyłeś
+  domyślnego folderu podczas instalacji Pythona):
+
+  export PATH="$PATH:/c/python27"
+
+  do pliku (zamieniając nazwa-użytkownika, a także C:\MinGW jeśli nie użyłeś
+  domyślnego folderu instalacji):
+
+  c:\MinGW\msys\1.0\home\nazwa-użytkownika\.bashrc
+
+* Otwórz terminal, uruchamiając:
+
+  C:\MinGW\msys\1.0\msys.bat
+
+* Możesz już używać narzędzia:
+
+  python path/to/rpa.py

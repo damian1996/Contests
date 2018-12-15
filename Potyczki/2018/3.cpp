@@ -1,49 +1,28 @@
-#include <bits/stdc++.h>
-#define REP(i, n) for(int i = 0; i < n; i++)
-#define BCK(i, n) for(int i = n-1; i >= 0; i--)
-#define FWD(i, a, b) for(int i = a; i < b; i++)
-#define pb push_back
-#define st first
-#define nd second
-#define vi vector<int>
-#define vll vector<long long>
-#define pi pair<int, int>
-#define pll pair<long long, long long>
-#define vpi vector<pi>
-#define vpll vector<pll>
-#define mp(a, b) make_pair(a,b)
-using namespace std;
+#include <cstdio>
 typedef long long LL;
 typedef double ld;
-const LL p = 1000000007;
-
+const LL mod = 1000000007;
+const LL mod2 = 1086217963;
+const LL p = 122949823;
+const LL p2 = 104393321;
 
 int main() {
-    long long n, sum = 0;
-    cin >> n;
-    vector<long long> vec(n);
-    vector<pair<LL, LL>> edges;
-    for(int i=0; i<n; i++) cin >> vec[i];
-    std::sort(vec.begin(), vec.end());
-    int leaves = 0, maxi = 0, sum = 0, nodes = 0;
-    for(int i=0; vec[i] < 2; i++) if(vec[i] == 1) leaves++;
-    for(int i=0; vec[i]<=leaves; i++) {
-        nodes++;
-        if(vec[i] <= leaves && vec[i] > maxi) {
-            maxi = vec[i];
-        }
+    long long n;
+    int c;
+    auto xd = scanf("%lld\n", &n);
+    c = getchar();
+    long long hash1 = c, hash2 = c, hash1bis = c, hash2bis = c, pot = p, pot2 = p2;
+    while(1) {
+        c = getchar();
+        if(c == EOF) break;
+        hash1 = (hash1 + ((c) * pot) % mod) % mod;
+        hash2 = ((c) + (hash2 * p) % mod) % mod;
+        hash1bis = (hash1bis + ((c) * pot2) % mod2) % mod2;
+        hash2bis = ((c) + (hash2bis * p2) % mod2) % mod2;
+        pot = (pot*p) % mod;
+        pot2 = (pot2*p2) % mod2;
     }
-    for(int i=0; vec[i] <= maxi; i++) {
-        sum += vec[i];
-        if(sum == 2*i)
-            cout << "TRUE" << endl;
-    }
-
-    for(int i=0; i<n; i++) {
-
-    }
-    for(int i=0; i<edges.size(); i++) {
-        printf("%d %d\n", edges[i].first+1, edges[i].second+1);    
-    }
+    if(hash1 == hash2 && hash1bis == hash2bis) printf("TAK\n");
+    else printf("NIE\n");
     return 0;
 }
